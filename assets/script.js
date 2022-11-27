@@ -1,6 +1,12 @@
-var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-var specialCharacters = ['@',
+function genRandomNumber() {
+    var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    return numbers[Math.floor(Math.random() * numbers.length)];
+}
+
+
+function genRandomCharacter() {
+    var specialCharacters = ['@',
 '%',
 '+',
 '\\',
@@ -23,8 +29,11 @@ var specialCharacters = ['@',
 '-',
 '_',
 '.'];
+    return specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+}
 
-var lowerCaseCharacters =['a',
+function genRandomLowercase() {
+    var lowerCaseCharacters =['a',
 'b',
 'c',
 'd',
@@ -50,8 +59,11 @@ var lowerCaseCharacters =['a',
 'x',
 'y',
 'z'];
+    return lowerCaseCharacters[Math.floor(Math.random() * lowerCaseCharacters.length)];
+}
 
-var upperCaseCharacters = ['A',
+function genRandomUppercase() {
+    var upperCaseCharacters = ['A',
 'B',
 'C',
 'D',
@@ -77,9 +89,20 @@ var upperCaseCharacters = ['A',
 'X',
 'Y',
 'Z'];
+return upperCaseCharacters[Math.floor(Math.random() * upperCaseCharacters.length)];
+}
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
+function generatePassword() {
+    //pass passwordLength
+    //pass includeLowercase true/false
+    //pass includeUppercase true/false
+    //pass includeNumbers true/false
+    //pass includeSpecialCharacters true/false
+}
 
 // Write password to the #password input
 function writePassword() {
