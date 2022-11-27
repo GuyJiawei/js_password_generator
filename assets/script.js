@@ -78,11 +78,6 @@ var upperCaseCharacters = ['A',
 'Y',
 'Z'];
 
-function randomLowerCase() {
-    var index = Math.floor(Math.random() * lowerCaseCharacters.length);
-    var random = lowerCaseCharacters[index];
-}
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -97,5 +92,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-randomLowerCase()
