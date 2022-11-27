@@ -72,6 +72,19 @@ header {
   clear: both;
 }
 
+.selectors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    padding: 10px;
+}
+
+.selectors label {
+    margin: 15px;
+}
+
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -117,6 +130,8 @@ button[disabled] {
   resize: none;
   overflow: hidden;
 }
+
+
 
 @media (max-width: 690px) {
   .btn {
