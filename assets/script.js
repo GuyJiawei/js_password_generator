@@ -1,3 +1,4 @@
+// Arrays of all possible characters
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 var specialCharacters = ['@',
@@ -78,12 +79,16 @@ var upperCaseCharacters = ['A',
 'Y',
 'Z'];
 
+// empty variable to pass selected length to
 var passwordLength = "";
 
+// empty to add selected arrays to as the user chooses
 var validCharacters = [];
 
+// set default characters to lower case
 validCharacters = validCharacters.concat(lowerCaseCharacters);
 
+// variables to target each of the selector checkboxes
 var addUpper = document.querySelector("#includeUppercase");
 var addNumbers = document.querySelector("#includeNumbers");
 var addSpecChar = document.querySelector("#includeSpecialCharacters");
@@ -91,7 +96,7 @@ var addSpecChar = document.querySelector("#includeSpecialCharacters");
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//Add event listeners to all selectors in the form and pass valid arrays to validCharacters
+// Add event listeners to all selectors in the form and pass valid arrays to validCharacters
 addUpper.addEventListener("click", function() {
   if (addUpper.checked === true) 
   {
@@ -111,13 +116,14 @@ addSpecChar.addEventListener("click", function() {
   }
 })
 
-//define function generatePassword
+// define function generatePassword
 function generatePassword() {
+    // target password length selection box and pass value to passwordLength variable
     passwordLength= document.getElementById("numberClick").value;
     var randomPassword = "";
-    //loop to create passwrod of selected length
+    // loop to create password of selected length
     for(var i = 0; i < passwordLength; i++)
-    //create randomised password from valid characters array
+    // create randomised password from valid characters array
     {
       var index = Math.floor(Math.random() * validCharacters.length);
       randomPassword += validCharacters[index];
