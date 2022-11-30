@@ -15,7 +15,8 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #5399df;
+  background-image: url(./images/background.jpg);
+  background-position-x: center;
 }
 
 .wrapper {
