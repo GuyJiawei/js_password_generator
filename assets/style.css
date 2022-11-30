@@ -10,17 +10,24 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #5399df;
 }
 
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.wrapper h1 {
+  border: solid 10px rgb(221, 136, 136);
+  border-radius: 20px;
+  background-color: white;  
 }
 
 header {
@@ -32,14 +39,22 @@ header {
 
 .card {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
+  border-radius: 20%;
+  border-width: 5px;
+  border: solid 10px rgb(221, 136, 136);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-header::after {
@@ -72,12 +87,13 @@ header {
   clear: both;
 }
 
+/* feature/script-gen-password
+ */
 .selectors {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    
     padding: 10px;
 }
 
