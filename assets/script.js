@@ -118,25 +118,27 @@ addSpecChar.addEventListener("click", function() {
 
 // define function generatePassword
 function generatePassword() {
-    // target password length selection box and pass value to passwordLength variable
-    // turn passwordLength into an integer
-    //if statment to restrict selection to any number between 8 and 128
-    passwordLength= parseInt(document.getElementById("numberClick").value);
-      if (passwordLength < 8 || passwordLength > 128) 
-      {
-        alert("Please select a number between 8 and 128");
-        return null;
-      }
-    var randomPassword = "";
-    // loop to create password of selected length
-    for(var i = 0; i < passwordLength; i++)
-    // create randomised password from valid characters array
+  // target password length selection box and pass value to passwordLength variable
+  // turn passwordLength into an integer
+  //if statment to restrict selection to any number between 8 and 128
+  passwordLength= parseInt(document.getElementById("numberClick").value);
+    if (passwordLength < 8 || passwordLength > 128) 
     {
-      var index = Math.floor(Math.random() * validCharacters.length);
-      randomPassword += validCharacters[index];
+      alert("Please select a number between 8 and 128");
+      return null;
     }
-    return randomPassword;
-  };
+  var randomPassword = "";
+  // loop to create password of selected length
+  for(var i = 0; i < passwordLength; i++)
+  // create randomised password from valid characters array
+  {
+    var index = Math.floor(Math.random() * validCharacters.length);
+    randomPassword += validCharacters[index];
+  }
+  return randomPassword;
+};
+
+{}
 
 // Write password to the #password input
 function writePassword() {
